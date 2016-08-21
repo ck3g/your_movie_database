@@ -7,8 +7,13 @@
         Pictures
       .col-lg-10
         - movie.pictures.each do |picture|
-          = link_to picture.picture.url do
-            = image_tag picture.picture.thumb.url, class: "img-thumbnail"
+          .img-thumbnail{id: dom_id(picture)}
+            = link_to image_tag(picture.picture.thumb.url), picture.picture.url
+            = link_to t("pictures.remove"),
+              [movie, picture],
+              class: "btn btn-small btn-block btn-link",
+              method: :delete,
+              data: { confirm: t(:are_you_sure) }
   .form-group.row
     .col-lg-10.offset-lg-2
       = file_field_tag "movie_pictures[]", accept: 'image/png,image/gif,image/jpeg', multiple: true, id: "movie_pictures"
