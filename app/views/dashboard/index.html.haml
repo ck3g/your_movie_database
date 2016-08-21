@@ -1,12 +1,18 @@
 - if @movies.present?
-  %h2
+  %h2.m-b-3
     = t("dashboard.recently_added")
     = link_to t("movies.add_more"), new_movie_path, class: "btn btn-sm btn-outline-success"
 
   #movies
-    - @movies.each do |movie|
-      .movie{id: dom_id(movie)}
-        %h3= link_to movie.title, movie
+    - @movies.in_groups_of(4, false) do |group|
+      .row
+        - group.each do |movie|
+          .col-lg-3
+            .movie{id: dom_id(movie), style: "text-align: center"}
+              = link_to movie do
+                %h4= movie.title
+                - if pic = movie.pictures.first
+                  = image_tag pic.picture.thumb.url
 - else
   .jumbotron
     %p.lead= t("dashboard.no_movies_yet")
