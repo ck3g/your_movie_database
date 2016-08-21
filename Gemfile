@@ -32,6 +32,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem "haml", "~> 4.0.7"
 gem "devise", "~> 4.2.0"
+gem "simple_form", "~> 3.2.1"
 
 group :development, :test do
   gem "pry-rails", "~> 0.3.4"
