@@ -2,8 +2,7 @@
   .col-lg-12
     %h1
       = @movie.title
-      = link_to t("movies.edit"), [:edit, @movie]
-      = link_to t("movies.remove"), @movie, method: :delete, data: { confirm: t(:are_you_sure) }
+      = render 'movies/action_buttons', movie: @movie
 .row
   .col-lg-12
     %p= @movie.description
