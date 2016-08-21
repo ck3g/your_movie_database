@@ -6,6 +6,6 @@ class Movie < ApplicationRecord
 
   validates :title, :user, presence: true
 
-  scope :recent, -> { new_first.last(RECENT_MOVIES_COUNT) }
+  scope :recent, -> { new_first.limit(RECENT_MOVIES_COUNT) }
   scope :new_first, -> { order(created_at: :desc) }
 end
