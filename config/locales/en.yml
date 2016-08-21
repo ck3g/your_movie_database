@@ -5,6 +5,13 @@ en:
     short_name: YMDB
     slogan: Keep your library up to date
 
+  nav:
+    dashboard: Dashboard
+
   welcome:
     sign_up_now: "Sign Up now!"
     to_dashboard: "Go to Dashboard"
+
+  dashboard:
+    no_movies_yet: You have no Movies yet
+    add_movies_now: "Add them Now!"

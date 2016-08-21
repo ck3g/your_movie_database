@@ -3,7 +3,7 @@
   %ul.nav.navbar-nav
     %li.nav-item.active
       = link_to dashboard_path, class: "nav-link" do
-        = t(:dashboard)
+        = t("nav.dashboard")
         - if current_page?(dashboard_path)
           %span.sr-only (current)
   %ul.nav.navbar-nav.pull-xs-right
