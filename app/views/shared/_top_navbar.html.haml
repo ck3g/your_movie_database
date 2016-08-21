@@ -1,11 +1,8 @@
 %nav.navbar.navbar-light.bg-faded
   = link_to t("project.short_name"), root_path, class: "navbar-brand"
   %ul.nav.navbar-nav
-    %li.nav-item.active
-      = link_to dashboard_path, class: "nav-link" do
-        = t("nav.dashboard")
-        - if current_page?(dashboard_path)
-          %span.sr-only (current)
+    = nav_bar_link t("nav.dashboard"), dashboard_path
+    = nav_bar_link t("nav.movies"), movies_path
   %ul.nav.navbar-nav.pull-xs-right
     %li.nav-item.active
       = link_to t('auth.logout'), destroy_user_session_path, method: :delete, class: "nav-link"

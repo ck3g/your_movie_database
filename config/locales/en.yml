@@ -15,6 +15,7 @@ en:
 
   nav:
     dashboard: Dashboard
+    movies: Movies
 
   welcome:
     sign_up_now: "Sign Up now!"
@@ -31,5 +32,6 @@ en:
     removed_successfully: "Movie has been removed from your collection"
     remove: Remove
     edit: Edit
+    title_index: Your movie collection
     title_new: Add movie to collection
     title_edit: Update movie details

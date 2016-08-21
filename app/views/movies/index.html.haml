@@ -1,0 +1,6 @@
+%h1= t("movies.title_index")
+
+#movies
+  - @movies.each do |movie|
+    .movie{id: movie.id}
+      = link_to movie.title, movie

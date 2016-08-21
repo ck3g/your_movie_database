@@ -2,6 +2,10 @@ class MoviesController < ApplicationController
   before_action :authenticate_user!
   before_action :find_movie, only: [:show, :edit, :update, :destroy]
 
+  def index
+    @movies = current_user.movies
+  end
+
   def new
     @movie = current_user.movies.new
   end
