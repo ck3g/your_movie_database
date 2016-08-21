@@ -13,6 +13,7 @@ class MoviesController < ApplicationController
   def create
     @movie = current_user.movies.new safe_params
     if @movie.save
+      UploadPictures.upload(@movie, params[:movie_pictures])
       redirect_to dashboard_path, notice: I18n.t("movies.created_successfully")
     else
       render :new
@@ -27,6 +28,7 @@ class MoviesController < ApplicationController
 
   def update
     if @movie.update_attributes safe_params
+      UploadPictures.upload(@movie, params[:movie_pictures])
       redirect_to @movie, notice: t("movies.updated_successfully")
     else
       render :edit

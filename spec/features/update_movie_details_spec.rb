@@ -12,6 +12,7 @@ feature "Update movie details" do
     within "#edit_movie_#{movie.id}" do
       fill_in "movie_title", with: "Ocean Eleven"
       fill_in "movie_description", with: "Movie Description"
+      attach_file "movie_pictures", "#{Rails.root}/spec/fixtures/picture.jpg"
       click_button "Update Movie"
     end
 
@@ -20,5 +21,6 @@ feature "Update movie details" do
     movie.reload
     expect(movie.title).to eq "Ocean Eleven"
     expect(movie.description).to eq "Movie Description"
+    expect(movie.pictures.count).to eq 1
   end
 end

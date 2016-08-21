@@ -1,6 +1,9 @@
-= simple_form_for movie, html: { class: 'form-horizontal' }, wrapper: :horizontal_form do |f|
+= simple_form_for movie, html: { class: 'form-horizontal', multipart: true }, wrapper: :horizontal_form do |f|
   = f.input :title
   = f.input :description, as: :text
+  .form-group.row
+    .col-lg-8.offset-lg-2
+      = file_field_tag "movie_pictures[]", accept: 'image/png,image/gif,image/jpeg', multiple: true, id: "movie_pictures"
   .form-group.row
     .col-lg-8.offset-lg-2
       = f.submit class: "btn btn-primary"

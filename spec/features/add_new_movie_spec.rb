@@ -12,6 +12,7 @@ feature "Add new movie" do
     within "#new_movie" do
       fill_in "movie_title", with: "Ocean Eleven"
       fill_in "movie_description", with: "Description of Ocean11"
+      attach_file "movie_pictures", "#{Rails.root}/spec/fixtures/picture.jpg"
       click_button "Add to Collection"
     end
 
@@ -19,5 +20,6 @@ feature "Add new movie" do
     movie = Movie.last
     expect(movie.title).to eq "Ocean Eleven"
     expect(movie.description).to eq "Description of Ocean11"
+    expect(movie.pictures.count).to eq 1
   end
 end
