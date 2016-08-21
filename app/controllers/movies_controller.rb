@@ -1,5 +1,6 @@
 class MoviesController < ApplicationController
   before_action :authenticate_user!
+  before_action :find_movie, only: [:show, :destroy]
 
   def new
     @movie = current_user.movies.new
@@ -15,12 +16,20 @@ class MoviesController < ApplicationController
   end
 
   def show
-    @movie = current_user.movies.find params[:id]
+  end
+
+  def destroy
+    @movie.destroy
+    redirect_to dashboard_path, notice: I18n.t("movies.removed_successfully")
   end
 
   private
 
   def safe_params
     params.require(:movie).permit(:title, :description)
+  end
+
+  def find_movie
+    @movie = current_user.movies.find params[:id]
   end
 end

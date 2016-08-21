@@ -1,5 +1,7 @@
 
 en:
+  are_you_sure: Are you sure?
+
   helpers:
     submit:
       movie:
@@ -24,3 +26,5 @@ en:
 
   movies:
     created_successfully: "Movie added to collection"
+    removed_successfully: "Movie has been removed from your collection"
+    remove: Remove

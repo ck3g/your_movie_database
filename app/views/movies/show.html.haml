@@ -1,2 +1,4 @@
-%h1= @movie.title
+%h1
+  = @movie.title
+  = link_to t("movies.remove"), @movie, method: :delete, data: { confirm: t(:are_you_sure) }
 %p= @movie.description
