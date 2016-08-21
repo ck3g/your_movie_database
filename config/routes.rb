@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  resources :movies, only: [:new, :create]
+  resources :movies, only: [:new, :create, :show]
 
   get :dashboard, to: "dashboard#index"
 

@@ -4,7 +4,7 @@
   #movies
     - @movies.each do |movie|
       .movie{id: dom_id(movie)}
-        %h3= movie.title
+        %h3= link_to movie.title, movie
 - else
   .jumbotron
     %p.lead= t("dashboard.no_movies_yet")

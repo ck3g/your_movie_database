@@ -14,6 +14,10 @@ class MoviesController < ApplicationController
     end
   end
 
+  def show
+    @movie = current_user.movies.find params[:id]
+  end
+
   private
 
   def safe_params
