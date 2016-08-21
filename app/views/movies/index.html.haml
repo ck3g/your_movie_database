@@ -11,3 +11,7 @@
           %h3= movie.title
           = render "action_buttons", movie: movie
       %hr
+
+.row
+  .col-lg-12
+    = paginate @movies

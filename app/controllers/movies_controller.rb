@@ -3,7 +3,7 @@ class MoviesController < ApplicationController
   before_action :find_movie, only: [:show, :edit, :update, :destroy]
 
   def index
-    @movies = current_user.movies
+    @movies = current_user.movies.order(created_at: :desc).page(params[:page])
   end
 
   def new

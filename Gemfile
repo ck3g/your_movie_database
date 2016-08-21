@@ -35,6 +35,7 @@ gem "devise", "~> 4.2.0"
 gem "simple_form", "~> 3.2.1"
 gem "carrierwave", "~> 0.11.2"
 gem "mini_magick", "~> 4.5.1"
+gem "kaminari", "~> 0.17.0"
 
 group :development, :test do
   gem "pry-rails", "~> 0.3.4"
