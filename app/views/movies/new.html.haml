@@ -1,0 +1,10 @@
+
+.row
+  .col-lg-12
+    = simple_form_for @movie, html: { class: 'form-horizontal' }, wrapper: :horizontal_form do |f|
+      = f.input :title
+      = f.input :description, as: :text
+      .form-group.row
+        .col-lg-8.offset-lg-2
+          = f.submit class: "btn btn-primary"
+          = link_to t(:cancel), dashboard_path, class: "btn btn-link"
