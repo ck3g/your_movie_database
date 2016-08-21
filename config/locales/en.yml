@@ -20,6 +20,7 @@ en:
   dashboard:
     no_movies_yet: You have no Movies yet
     add_movies_now: "Add them Now!"
+    recently_added: Recently added
 
   movies:
     created_successfully: "Movie added to collection"

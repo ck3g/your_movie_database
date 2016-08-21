@@ -1,3 +1,11 @@
-.jumbotron
-  %p.lead= t("dashboard.no_movies_yet")
-  %p.lead= link_to t("dashboard.add_movies_now"), new_movie_path, class: "btn btn-success"
+- if @movies.present?
+  %h2= t("dashboard.recently_added")
+
+  #movies
+    - @movies.each do |movie|
+      .movie{id: dom_id(movie)}
+        %h3= movie.title
+- else
+  .jumbotron
+    %p.lead= t("dashboard.no_movies_yet")
+    %p.lead= link_to t("dashboard.add_movies_now"), new_movie_path, class: "btn btn-success"
