@@ -35,6 +35,7 @@ en:
     title_index: Your movie collection
     title_new: Add movie to collection
     title_edit: Update movie details
+    add_more: "+ Add more"
 
   pictures:
     remove: Remove

@@ -1,5 +1,7 @@
 - if @movies.present?
-  %h2= t("dashboard.recently_added")
+  %h2
+    = t("dashboard.recently_added")
+    = link_to t("movies.add_more"), new_movie_path, class: "btn btn-sm btn-outline-success"
 
   #movies
     - @movies.each do |movie|
