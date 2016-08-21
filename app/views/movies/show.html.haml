@@ -1,5 +1,18 @@
-%h1
-  = @movie.title
-  = link_to t("movies.edit"), [:edit, @movie]
-  = link_to t("movies.remove"), @movie, method: :delete, data: { confirm: t(:are_you_sure) }
-%p= @movie.description
+.row
+  .col-lg-12
+    %h1
+      = @movie.title
+      = link_to t("movies.edit"), [:edit, @movie]
+      = link_to t("movies.remove"), @movie, method: :delete, data: { confirm: t(:are_you_sure) }
+.row
+  .col-lg-12
+    %p= @movie.description
+
+- if @movie.pictures.present?
+  .row
+    .col-lg-12
+      %h3= t("movies.pictures")
+
+      %p
+        - @movie.pictures.each do |picture|
+          = link_to image_tag(picture.picture.thumb.url), picture.picture.url, class: "img-thumbnail"
