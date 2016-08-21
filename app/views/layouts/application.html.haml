@@ -1,18 +1,23 @@
 !!!
 %html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title YourMovieDatabase
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{charset: "utf-8"}/
+    %meta{content: "width=device-width, initial-scale=1, shrink-to-fit=no", name: "viewport"}/
+    %meta{content: "ie=edge", "http-equiv" => "x-ua-compatible"}/
+
+    %title= t("project.name")
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
   %body
     .container
+      - if show_top_navbar?
+        = render 'shared/top_navbar'
+      - else
+        .spacing
+
+      = render 'shared/alerts'
+
       .header.clearfix
-
-      - if notice
-        %p.alert.alert-success= notice
-      - if alert
-        %p.alert.alert-danger= alert
-
       = yield
