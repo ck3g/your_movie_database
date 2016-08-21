@@ -14,10 +14,7 @@
     .container
       - if show_top_navbar?
         = render 'shared/top_navbar'
-      - else
-        .spacing
 
       = render 'shared/alerts'
-
-      .header.clearfix
+      .header.clearfix.spacing
       = yield
