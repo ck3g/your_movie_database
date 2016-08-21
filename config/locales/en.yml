@@ -2,6 +2,7 @@
 en:
   project:
     name: Your Movie DataBase
+    short_name: YMDB
     slogan: Keep your library up to date
 
   welcome:
