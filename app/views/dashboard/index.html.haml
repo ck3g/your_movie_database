@@ -8,7 +8,7 @@
       .row
         - group.each do |movie|
           .col-lg-3
-            .movie{id: dom_id(movie), style: "text-align: center"}
+            .movie.centered{id: dom_id(movie)}
               = link_to movie do
                 %h4= movie.title
                 - if pic = movie.pictures.first
