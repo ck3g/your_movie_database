@@ -1,24 +1,6 @@
-# README
+# Your Movie DataBase
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  * Build an AngularJS (or Ruby on Rails) application to manage your movie collection.
+  * The user should be able to CRUD movies and upload multiple pictures for each of her films.
+  * To store the data, you can use local storage mechanisms modern browsers are giving you - use what you're comfortable with!
+  * Upon loading, the user should be able to see a visual representation of his/her film library (i.e. utilizing the films' uploaded pictures.)
