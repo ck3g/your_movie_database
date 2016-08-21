@@ -7,7 +7,8 @@
         Pictures
       .col-lg-10
         - movie.pictures.each do |picture|
-          = image_tag picture.picture.thumb.url, class: "img-thumbnail"
+          = link_to picture.picture.url do
+            = image_tag picture.picture.thumb.url, class: "img-thumbnail"
   .form-group.row
     .col-lg-10.offset-lg-2
       = file_field_tag "movie_pictures[]", accept: 'image/png,image/gif,image/jpeg', multiple: true, id: "movie_pictures"
