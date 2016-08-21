@@ -6,5 +6,6 @@ feature "Welcome page" do
 
     expect(page).to have_content "Your Movie DataBase"
     expect(page).to have_content "Keep your library up to date"
+    expect(page).to have_selector "a", text: "Sign Up now!"
   end
 end

@@ -3,3 +3,7 @@ en:
   project:
     name: Your Movie DataBase
     slogan: Keep your library up to date
+
+  welcome:
+    sign_up_now: "Sign Up now!"
+    to_dashboard: "Go to Dashboard"
