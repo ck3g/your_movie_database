@@ -6,6 +6,7 @@ en:
     submit:
       movie:
         create: Add to Collection
+        update: Update Movie
 
   project:
     name: Your Movie DataBase
@@ -26,5 +27,9 @@ en:
 
   movies:
     created_successfully: "Movie added to collection"
+    updated_successfully: "Movie has been updated"
     removed_successfully: "Movie has been removed from your collection"
     remove: Remove
+    edit: Edit
+    title_new: Add movie to collection
+    title_edit: Update movie details

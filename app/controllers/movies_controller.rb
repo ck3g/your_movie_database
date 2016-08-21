@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
   before_action :authenticate_user!
-  before_action :find_movie, only: [:show, :destroy]
+  before_action :find_movie, only: [:show, :edit, :update, :destroy]
 
   def new
     @movie = current_user.movies.new
@@ -16,6 +16,17 @@ class MoviesController < ApplicationController
   end
 
   def show
+  end
+
+  def edit
+  end
+
+  def update
+    if @movie.update_attributes safe_params
+      redirect_to @movie, notice: t("movies.updated_successfully")
+    else
+      render :edit
+    end
   end
 
   def destroy

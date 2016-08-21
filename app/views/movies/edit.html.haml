@@ -1,0 +1,4 @@
+%h1= t("movies.title_edit")
+.row
+  .col-lg-12
+    = render 'form', movie: @movie, cancel_link_path: movie_path(@movie)
