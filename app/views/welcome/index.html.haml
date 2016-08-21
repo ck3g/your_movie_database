@@ -1,2 +1,5 @@
-%h1= t("project.name")
-%h2= t("project.slogan")
+.jumbotron
+  %h1= t("project.name")
+  %p.lead= t("project.slogan")
+  %p.lead
+    = link_to "Sign Up now!", new_user_registration_path, class: "btn btn-success"
